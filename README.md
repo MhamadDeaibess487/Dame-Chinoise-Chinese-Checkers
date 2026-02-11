@@ -1,57 +1,63 @@
+Voici un README propre et professionnel pour le projet des Dames Chinoises :
+
+---
+
 # Chinese Checkers — INF201 Project
 
-Functional implementation of Chinese Checkers in OCaml.
+Functional implementation of the Chinese Checkers game in OCaml, developed for the INF201 course (Algorithms and Functional Programming).
 
-## 📚 Context
+## Project Overview
 
-This project was developed for the INF201 course  
-**Algorithms and Functional Programming**  
-Université Grenoble Alpes.
+This project models and implements the Chinese Checkers board game using functional programming principles.
+The board is represented using cube coordinates `(i, j, k)` satisfying the constraint `i + j + k = 0`.
+The implementation supports multiple players and enforces all game rules, including move validation and win detection.
 
-The goal is to model the Chinese Checkers game and implement all core mechanics using functional programming principles.
+## Features
 
----
+* Parameterized star-shaped board
+* Cube coordinate system `(i, j, k)`
+* Support for 1 to 6 players
+* Turn management via board rotation
+* Validation of single moves
+* Validation of multiple jumps
+* Configuration updates after each move
+* Victory detection
+* Move generation
+* Greedy strategy implementation
 
-## 🧠 Features
+## Project Structure
 
-- Parameterized board dimension
-- Cube-coordinate system (i, j, k) with constraint: i + j + k = 0
-- Support for 1, 2, 3 or 6 players
-- Turn rotation via board transformation
-- Validation of:
-  - Single-step moves
-  - Multiple jumps
-- Configuration update after each move
-- Win detection
-- Score computation
-- Possible move generation
-- Greedy strategy implementation
+* Board geometry and coordinate validation
+* Configuration initialization
+* Move validation logic
+* Move application and state updates
+* Game verification
+* Strategy computation
 
----
-
-## 🏗 Architecture
-
-### Core Types
-
-- `case = int * int * int`
-- `couleur`
-- `configuration`
-- `coup = Du of case * case | Sm of case list`
-
-### Main Functional Blocks
-
-1. Board geometry and coordinate validation
-2. Configuration initialization
-3. Move validation
-4. Move execution
-5. Game verification
-6. Strategy implementation
-
----
-
-## ▶️ How to Run
+## How to Run
 
 Compile with:
 
 ```bash
-ocamlc -o dames rendu_etd.ml
+ocamlc -o chinese_checkers rendu_etd.ml
+```
+
+Or run with the OCaml interpreter:
+
+```bash
+ocaml rendu_etd.ml
+```
+
+If a graphical interface is provided, follow the course instructions to use it.
+
+## Educational Objectives
+
+* Practice functional programming in OCaml
+* Work with algebraic data types
+* Implement recursive functions
+* Model rule-based systems
+* Develop basic strategic algorithms
+
+---
+
+Si tu veux une version plus courte (type 10 lignes max) pour GitHub, je peux te la faire aussi.
